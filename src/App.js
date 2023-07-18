@@ -1,9 +1,14 @@
 import './App.css';
-
+import { useState } from 'react';
 function App() {
+  const [name,setName] = useState('Jumanazar')
+
+  function nameEdit(){
+    return setName("Boqiyev Jumanazar")
+  }
   return (
     <div className="App">
-      <h1>salom dunyo</h1>
+      <h1 onClick = {nameEdit}>salom {name}</h1>
     </div>
   );
 }
