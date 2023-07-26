@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import { Fragment } from 'react';
 import Title from './component/Title';
 function App() {
   const [name, setName] = useState('Assalomu alaykum')
@@ -34,11 +35,11 @@ function App() {
       {
         events.map((event) => {
           return (
-            <div key={event.rank}>
+            <Fragment key={event.rank}>
               <Title title = "Salom Shoh oka" subtitle = "Salom hammaga"/>
               <h2>{event.title}</h2>
               <button onClick={() => itemDelete(event.rank)}>Delete</button>
-            </div>)
+            </Fragment>)
         })
       }</div>
       }
